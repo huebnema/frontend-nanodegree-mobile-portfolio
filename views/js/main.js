@@ -518,6 +518,8 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 
+// Reference for optimizing the "background pizzas":  https://discussions.udacity.com/t/project-4-how-do-i-optimize-the-background-pizzas-for-loop/36302
+
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
