@@ -18,6 +18,8 @@ cameron *at* udacity *dot* com
 
 // As you may have realized, this website randomly generates pizzas.
 // Here are arrays of all possible pizza ingredients.
+
+
 var pizzaIngredients = {};
 pizzaIngredients.meats = [
   "Pepperoni",
@@ -397,6 +399,9 @@ var pizzaElementGenerator = function(i) {
 
   return pizzaContainer;
 };
+
+// Reference for resizing in under 5ms:  https://discussions.udacity.com/t/unable-to-get-time-to-resize-pizzas-under-5-ms/12071
+
 
 // resizePizzas(size) is called when the slider in the "Our Pizzas" section of the website moves.
 var resizePizzas = function(size) { 
