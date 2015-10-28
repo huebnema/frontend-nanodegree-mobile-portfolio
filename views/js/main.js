@@ -552,7 +552,9 @@ function updatePositions() {
 
     // Replace .left with .transform to trigger composite rather than paint
     // Reference:  https://discussions.udacity.com/t/translatex-property/19430
-    items[i].style.transform = 'translateX(100px)';
+    // items[i].style.transform = 'translateX(100px)';
+       items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
