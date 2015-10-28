@@ -522,17 +522,34 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 
 // Moves the sliding background pizzas based on scroll position
 
+var frame = 0;
+
 function updatePositions() {
 
   frame++;
+
+  // Performance measuring code
   window.performance.mark("mark_start_frame");
+
   // Cache scrollTop so the for-loop has less to calculate
   var top = document.body.scrollTop;
 
+  //Change from querySelectorAll to getElementsByClassName
   var items = document.getElementsByClassName('mover');
+
+  // Hold the repeating values here
+  var constArray = [];
+
   // Results of caching test at https://jsperf.com/caching-array-length were not significant. Therefore, no optimiztions were performed for this for-loop.
-  for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((top / 1250) + (i % 5));
+  for (i = 0; i < 5; i++) {
+  // Use cached "top" variable here
+    constArray.push(Math.sin((top / 1250) + i % 5));
+  }
+
+  // Second for loop to calculate the values stored in the new constant array. Again, sourcing prather-mcs:  https://gist.github.com/prather-mcs/05526bb379f845ee2ba1
+  for (i = 0; i < items.length; i++) {
+    var phase = constArray[i % 5];
+
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
