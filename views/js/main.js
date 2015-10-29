@@ -525,6 +525,8 @@ function updatePositions() {
     // Replace .left with .transform to trigger composite rather than paint
     // Reference:  https://discussions.udacity.com/t/translatex-property/19430
     // items[i].style.transform = 'translateX(100px)';
+    
+
        items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
 
   }
@@ -544,7 +546,7 @@ window.addEventListener('scroll', updatePositions);
 
 // Reference for getting started:  https://discussions.udacity.com/t/can-anyone-provide-hints-or-tips-for-achieving-60-fps/4395/2
 
-// Reference for calculating number of pizzas with inner.Height:  https://discussions.udacity.com/t/calculating-number-of-pizzas-with-inner-height/35343/6
+// Reference for calculating number of pizzas with Window.innerHeight:  https://discussions.udacity.com/t/calculating-number-of-pizzas-with-inner-height/35343/6
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
