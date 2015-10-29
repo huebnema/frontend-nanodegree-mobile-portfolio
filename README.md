@@ -1,6 +1,22 @@
 ## Website Performance Optimization portfolio project
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
+For this project, I made several optimizations to the code. PageSpeed Insights and the Chrome DevTools timeline were both used to measure performance.
+
+Optimizations Include:
+
+- Adding a media query to unblock rendering CSS
+- Optimizing images using ImageOptim
+- Resizing images
+- Making sections of Javascript asynchronous
+- Adding a web font loader
+- Caching variables
+- Selecting elements by class name rather than using querySelectorAll
+- Reducing the number of pizzas being generated in the background
+- 
+
+
+
+<!-- Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
 To get started, check out the repository, inspect the code,
 
@@ -71,3 +87,4 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 * <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
 * <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
 * <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
+ -->
