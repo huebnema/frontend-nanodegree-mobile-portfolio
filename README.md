@@ -12,7 +12,7 @@ Optimizations Include:
 - Caching variables
 - Selecting elements by class name rather than using querySelectorAll
 - Reducing the number of pizzas being generated in the background
-- 
+- Use will-change: transform to reduce painting
 
 
 
