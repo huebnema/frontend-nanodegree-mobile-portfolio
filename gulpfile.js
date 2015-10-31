@@ -3,7 +3,9 @@
 var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
+	inlineCss = require('gulp-inline-css');
 	minifyCSS = require('gulp-minify-css');
+
 
 gulp.task('scripts', function(){
 	gulp.src('js/*.js')
@@ -16,4 +18,11 @@ gulp.task('styles', function(){
 	gulp.src('css/*.css')
 		.pipe(minifyCSS())
 		.pipe(gulp.dest('minCSS'));
+});
+
+gulp.task('inline', function() {
+    return gulp.src('./*.html')
+        .pipe(inlineCss())
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('build/'));
 });
