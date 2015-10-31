@@ -23,6 +23,5 @@ gulp.task('styles', function(){
 gulp.task('inline', function() {
     return gulp.src('./*.html')
         .pipe(inlineCss())
-        .pipe(minifyCSS())
         .pipe(gulp.dest('build/'));
 });
