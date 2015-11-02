@@ -554,7 +554,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var s = 256;
   var rowTop = 0;
 
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 40; i++) {
     rowTop = (Math.floor(i / cols) * s);
 
     if (rowTop > window.innerHeight) {
